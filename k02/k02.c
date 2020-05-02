@@ -5,6 +5,7 @@
 
 extern double p_stdnorm(double z);
 
+
 int main(void)
 {
     double val;
@@ -12,6 +13,7 @@ int main(void)
     char buf[256];
     FILE* fp;
     double L1=1,L2=1;
+    double max_val, min_val;
 
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
