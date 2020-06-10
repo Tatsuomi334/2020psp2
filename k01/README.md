@@ -57,7 +57,10 @@ sample mean：
 sample variance：
 population mean (estimated)：
 population variance (estimated)：
-```
+```標本平均：173.888750
+標本分散：25.361711
+母集団平均：173.888750
+母集団分散：28.984813
 
 ## 修正履歴
 
