@@ -3,11 +3,11 @@
 #include <string.h>
 #include <math.h>
 
-extern double ave_online(double val,double ave,int N) 
+ double ave_online(double val,double ave,int N) 
 {
     return(((N-1)*ave/N)+(val/N));
 }
-extern double var_online(double val,double ave,double square_ave,int N)
+double var_online(double val,double ave,double square_ave,int N)
 {
     return(((N-1)*square_ave/N)+pow(val,2)/N-(pow((((N-1)*ave/N)+(val/N)),2)));
 }
@@ -52,10 +52,10 @@ int main(void)
         fputs("file close error\n",stderr);
         exit(EXIT_FAILURE);
     }
-   printf("ave=%lf\n",ave);
-   printf("var=%lf\n",var);
-   printf("unave=%lf\n",esave);
-   printf("unvar=%lf\n",esvar);
+   printf("標本平均：%lf\n",ave);
+   printf("標本分散：%lf\n",var);
+   printf("母集団平均：%lf\n",esave);
+   printf("母集団分散：%lf\n",esvar);
 
     return 0;
 
