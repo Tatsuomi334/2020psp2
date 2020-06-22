@@ -20,7 +20,7 @@ int main(void)
     double L1=1,L2=1;
     double max_val, min_val;
     double a;
-    double L_A, L_B,mu_a,var_a,mu_b,var_b,L1,L2;
+    double L_A, L_B,mu_a,var_a,mu_b,var_b,La,Lb;
 
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
@@ -32,13 +32,20 @@ int main(void)
         fputs("File open error\n",stderr);
         exit(EXIT_FAILURE);
     }
-
+     printf("mu_a =");
+     scanf("%lf",&mu_a);
+     printf("var_a =");
+     scanf("%lf",&var_a);
+     printf("mu_b = ");
+     scanf("lf",&mu_b);
+     printf("var_b =");
+     scanf("lf",&var_b);
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
         z=(val-mu_a)/ var_a;
-        L1=p_stdnorm(z)*L1;
+        La=p_stdnorm(z)*La;
         z=(val-mu_b)/var_b;
-        L2=p_stdnorm(z)*L2;
+        Lb=p_stdnorm(z)*Lb;
 
     }
 
@@ -47,8 +54,8 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    printf("L_A: %f\n",L1);
-    printf("L_B: %f\n",L2);
+    printf("L_A: %f\n",La);
+    printf("L_B: %f\n",Lb);
 
     return 0;
 
