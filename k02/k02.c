@@ -10,6 +10,7 @@ return  exp(-z*z/2)/sqrt(2*M_PI);
 }
 
 
+
 int main(void)
 {
     double z;
@@ -17,10 +18,10 @@ int main(void)
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
-    double L1=1,L2=1;
+    double La=1,Lb=1;
     double max_val, min_val;
     double a;
-    double L_A, L_B,mu_a,var_a,mu_b,var_b,La,Lb;
+    double mu_a,mu_b,var_a,var_b;
 
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
@@ -36,10 +37,10 @@ int main(void)
      scanf("%lf",&mu_a);
      printf("var_a =");
      scanf("%lf",&var_a);
-     printf("mu_b = ");
-     scanf("lf",&mu_b);
+     printf("mu_b =");
+     scanf("%lf",&mu_b);
      printf("var_b =");
-     scanf("lf",&var_b);
+     scanf("%lf",&var_b);
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
         z=(val-mu_a)/ var_a;
@@ -61,6 +62,7 @@ int main(void)
 
 
 }
+
 
 
 
