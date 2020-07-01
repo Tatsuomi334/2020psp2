@@ -30,6 +30,8 @@ Whileで尤度を求める
 ## 入出力結果
 
 ```
+L_A: 0.000006
+L_B: 0.000002
 Likelihood for A：
 Likelihood for B：
 ```
