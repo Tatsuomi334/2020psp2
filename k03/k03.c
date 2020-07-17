@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
         /* r_stdnormを使って，1人のデータを捏造 */
         
 
-        dummy = r_stdnorm()+mu  ;
+        dummy = sigma*r_stdnorm()+mu  ;
         printf("%5.2lf\n",dummy);
     
       }
