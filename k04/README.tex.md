@@ -1,6 +1,6 @@
 # 課題4 レポート
 
-aa83988848 薗田光太郎
+bb35319029 中岡辰浩
 
 ## 課題
 
@@ -11,6 +11,7 @@ aa83988848 薗田光太郎
 この二つのファイルを読み取り，学籍番号，身長，性別の3つをメンバーとする構造体の配列で管理するとよい．
 
 ## ソースコードの説明
+性別、身長と学籍番号のデータを読み込み、もし学籍番号があれば、性別と身長を表示し、なかったら  NO DATAを出力する。
 
 
 ## 入出力結果
@@ -20,7 +21,7 @@ aa83988848 薗田光太郎
 ```
 Input the filename of sample height : ../sample/heights.csv
 Input the filename of sample ID : ../sample/IDs.csv
-Which ID's data do you want? : 45313125
+Which ID's data do you want? : c
 ---
 ID : 45313125
 gender : Female
