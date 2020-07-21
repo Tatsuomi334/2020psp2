@@ -15,7 +15,7 @@ int main(void)
     int ID,i;
     char fname1[FILENAME_MAX],fname2[FILENAME_MAX];
     char buf[256];
-    double height,gender;
+    double height;int gender;
     FILE* fp1;
     FILE*fp2;
     DATA DATA[14];
@@ -36,16 +36,16 @@ int main(void)
 
     
      i=0;
-
+    
+     fgets(buf,sizeof(buf),fp1);
     while(fgets(buf,sizeof(buf),fp1) != NULL){
-        fgets(buf,sizeof(buf),fp1);
-        sscanf(buf,"%lf,%lf",&gender,&height);
+        sscanf(buf,"%d,%lf",&gender,&height);
         DATA[i].gender = gender ;
         DATA[i].height=height;
         i++;
     }
       
-    printf("Input the filename of sample ID: %s\n",fname2);
+    printf("Input the filename of sample ID: ");
     fgets(fname2,sizeof(fname2),stdin);
     fname2[strlen(fname2)-1] ='\0';
 
@@ -58,7 +58,7 @@ int main(void)
     i=0;
     while(fgets(buf,sizeof(buf),fp2)!=NULL){
     
-        scanf(buf,"%d",&ID);
+        sscanf(buf,"%d",&ID);
         DATA[i].ID=ID;
         i++;
     }
