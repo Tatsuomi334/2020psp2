@@ -41,6 +41,8 @@ Which ID's data do you want? : 45313124
 ---
 No data
 ```
+
+```
 Which ID's data do you want?:45313125
 ID:45313125
 gender:female
@@ -48,6 +50,8 @@ height*152.400000
 
 Which ID's data do you want?:45313124
 NO DATA
+```
+
 ## 修正履歴
 
 [comment #20200720 sonoda]
@@ -74,3 +78,6 @@ NO DATA
 [comment0721宮下]
 
 課題提出お疲れさまでした！修正点はありません。k04完了です。
+
+[comment #20200721 sonoda]
+- 課題4の完了を確認
